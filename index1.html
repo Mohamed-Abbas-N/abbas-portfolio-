@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Abbas Mandhri N</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome 6 Free CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+
+  <style>
+    /* underline animation for nav links */
+    .nav-link {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* prevent header overlap */
+    }
+
+    /* Prevent any horizontal overflow */
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Slight transparent background for autofill (Contact) */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important; /* light transparent */
+      -webkit-text-fill-color: #fff !important; /* text stays white */
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    /* Default font for the whole site */
+    body {
+      font-family: "Raleway", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Paragraphs default */
+    p {
+      font-family: "Open Sans", sans-serif;
+    }
+
+    /* Utility font classes */
+    .font-poppins {
+      font-family: "Poppins", sans-serif !important;
+    }
+
+    .font-raleway {
+      font-family: "Raleway", sans-serif !important;
+    }
+    
+  </style>
+
+</head>
+<body class="bg-neutral-950 text-white overflow-x-hidden">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-black/50 backdrop-blur-lg shadow-md z-50 h-20 flex items-center">
+    <div class="mx-auto flex items-center justify-between w-full px-6 md:px-10">
+
+      <!-- Logo/Name aligned left -->
+      <h1 class="text-md md:text-2xl  font-bold tracking-wide">MOHAMED ABBAS MANDHRI N</h1>
+
+      <!-- Desktop Menu (centered) -->
+      <nav class="font-raleway hidden lg:flex space-x-10 text-md font-medium items-center mx-auto">
+        <a href="#about" class="nav-link active">ABOUT</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
+        <a href="#works" class="nav-link">WORKS</a>
+        <a href="#experience" class="nav-link">EXPERIENCE</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <!-- Resume Button (visible only on lg and above) -->
+      <a href="https://drive.google.com/file/d/1R1sTJKn4u3xNcArP0cL9Bl9CBSnh87Pm/view?usp=sharing" download 
+        class="font-poppins hidden xl:inline-block px-4 sm:px-6 py-1 sm:py-2 bg-black border-2 border-white text-white font-medium rounded-3xl hover:bg-white hover:text-black transition-colors text-base sm:text-md md:text-lg">
+        Resume
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="lg:hidden text-3xl">&#9776;</button>
+    </div>
+  </header>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="font-raleway lg:hidden fixed top-20 left-0 w-screen bg-black overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex flex-col items-center px-6 text-sm sm:text-lg font-medium z-40">
+    <a href="#about" class="nav-link my-2 active">ABOUT</a>
+    <a href="#projects" class="nav-link my-2">PROJECTS</a>
+    <a href="#works" class="nav-link my-2">WORKS</a>
+    <a href="#experience" class="nav-link my-2">EXPERIENCE</a>
+    <a href="#contact" class="nav-link my-2">CONTACT</a>
+
+    <!-- Resume Button Mobile -->
+    <a href="https://drive.google.com/file/d/1R1sTJKn4u3xNcArP0cL9Bl9CBSnh87Pm/view?usp=sharing" download 
+      class="font-poppins mt-4 mb-6 px-6 py-2 bg-black border-2 border-white text-white font-medium rounded-3xl hover:bg-white hover:text-black transition-colors text-base sm:text-md md:text-lg">
+      Resume
+    </a>
+  </div>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-auto mx-auto">
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="xl:min-h-screen  flex flex-col md:flex-row items-center justify-center pt-24 py-10 px-6 md:px-10 lg:px-20 overflow-hidden">
+
+      <!-- Profile Image -->
+      <div class="md:w-1/3 flex justify-center md:justify-start overflow-hidden">
+        <img src="assets/img/abbas.jpg" alt="Profile Image" class="rounded-full shadow-lg w-32 md:w-56 lg:w-80 aspect-square object-cover">
+      </div>
+
+      <!-- Text Content -->
+      <div class="md:w-2/3 text-center md:text-left space-y-4 sm:ml-5">
+
+        <!-- Title -->
+        <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold text-white flex flex-wrap items-center justify-center md:justify-start gap-1">
+          <span class="font-semibold">Hi, I'm Mohamed Abbas</span>
+        </h1>
+
+        <!-- Role + Rotating Words -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <h2 class="text-md sm:text-xl md:text-2xl text-white font-semibold leading-tight m-0">
+            UI/UX DESIGNER
+          </h2>
+
+          <h3 class="text-md sm:text-xl md:text-2xl text-gray-300 flex flex-wrap justify-center md:justify-start items-center gap-2 leading-tight m-0">
+            <span>Specialized in</span>
+            <span id="typing-text" class="text-white font-semibold"></span>
+          </h3>
+        </div>
+
+
+        <!-- Description -->
+        <p class="text-base sm:text-md md:text-lg text-gray-400 mt-4">
+          I'm Mohamed Abbas Mandhri – A creative designer specializing in UI/UX design, logo creation, and advertisement editing, with a passion for crafting visually appealing and user-friendly designs. Skilled in modern design tools and techniques to enhance brand identity and user experience, while pursuing Electronics and Communication Engineering (ECE) at KLN College.
+        </p>
+
+          <!-- Social Icons -->
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-6 justify-start">
+          <a href="https://www.linkedin.com/in/mohamed-abbas-n" target="_blank" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-white border-2 border-white text-black hover:bg-black hover:text-white transition-colors transform hover:scale-110">
+            <i class="fab fa-linkedin-in text-sm sm:text-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/daxo_designs?igsh=MTU4N241N3N1MzhheA%3D%3D" target="_blank" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-white border-2 border-white text-black hover:bg-black hover:text-white transition-colors transform hover:scale-110">
+            <i class="fab fa-instagram text-sm sm:text-lg"></i>
+          </a>
+          <a href="https://www.behance.net/mohamedabbas135" target="_blank" class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-white border-2 border-white text-black hover:bg-black hover:text-white transition-colors transform hover:scale-110">
+            <i class="fab fa-behance text-sm sm:text-lg"></i>
+          </a>
+        </div>
+
+        <!-- Resume Button -->
+        <div class="pt-1 sm:pt-3 flex justify-start">
+          <a href="https://drive.google.com/file/d/1R1sTJKn4u3xNcArP0cL9Bl9CBSnh87Pm/view?usp=sharing" download class="font-poppins px-3 sm:px-5 py-1 sm:py-2 bg-white border-2 border-white text-black font-medium rounded hover:bg-black hover:text-white transition-colors text-base sm:text-md md:text-lg">
+            Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE WITH SECTION -->
+    <section id="tools" class="py-16 px-3 flex flex-col items-center justify-center">
+      <!-- Title -->
+      <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-white mb-10 text-center">
+        EXPERIENCE WITH
+      </h2>
+
+        <!-- Tools Grid -->
+      <div class="flex justify-center items-center gap-8 md:gap-20 flex-nowrap overflow-x-auto">
+        <img src="assets/logo/figma.svg" alt="Figma" class="w-6 md:w-8 lg:w-8 object-contain">
+        <img src="assets/logo/photoshop.svg" alt="Photoshop" class="w-8 md:w-12 lg:w-15 object-contain">
+        <img src="assets/logo/canva.svg" alt="Canva" class="w-8 md:w-12 lg:w-15 object-contain">
+        <img src="assets/logo/miro.svg" alt="Miro" class="w-8 md:w-12 lg:w-15 object-contain">
+      </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <section id="projects" class="py-16 px-6 bg-black text-white">
+      <div class="container mx-auto sm:px-4 max-w-6xl">
+        <h6 class="text-white mb-2 text-center">
+          PROJECTS
+        </h6>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-10 md:mb-12 lg:mb-16 text-center">
+          UI/UX CASE STUDIES
+        </h2>
+
+      <!-- Projects Grid -->
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+
+        <!-- Project Card 1 -->
+        <div class="relative group bg-stone-800 rounded-lg overflow-hidden shadow-lg w-sm h-sm sm:w-md sm:h-md transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+
+          <!-- Overlay covering the whole card -->
+          <div
+            class="text-sm sm:text-md font-semibold  absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <a href="https://drive.google.com/file/d/1VRwwc8RNwgg6K1JG07r1_OfFlWeP2UAF/view?usp=sharing"
+              target="_blank"
+              class="font-poppins mb-3 inline-block text-center bg-white text-black px-4 py-2 rounded border-2 border-white hover:bg-black hover:text-white transition">
+              VIEW CASE STUDY
+            </a>
+            <a href="https://www.figma.com/proto/MNbNlVSn58Sz02fneyh14r/my-project?page-id=&node-id=9-373&p=f&viewport=553%2C53%2C0.04&t=PfSynAGj8UUCQQKu-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=71%3A348"
+              target="_blank"
+              class="font-poppins inline-block text-center bg-white text-black px-4 py-2 rounded border-2 border-white hover:bg-black hover:text-white transition">
+              VIEW PROTOTYPE
+            </a>
+          </div>
+
+          <!-- Image -->
+          <img src="assets/img/projects/1.jpg" class="w-full h-48 object-cover" />
+
+          <!-- Content -->
+          <div class="px-4 py-4 flex flex-col justify-between flex-1 relative z-10">
+            <h3 class="font-poppins text-lg md:text-xl mt-3 mb-3 font-semibold text-center">
+              RoomRadar – Smart Rental Finder App
+            </h3>
+            <p class="text-gray-300 text-sm text-center mb-4">
+              RoomRadar is a smart rental finder app that helps users discover verified rental spaces The app offers fast and easy search and helps find your ideal rental quickly and securely
+            </p>
+            <span class="font-poppins text-gray-400 text-xs mt-auto text-center">
+              June 2025 – July 2025
+            </span>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="relative group bg-stone-800 rounded-lg overflow-hidden shadow-lg w-sm h-sm sm:w-md sm:h-md transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+
+          <!-- Overlay covering the whole card -->
+          <div
+            class="text-sm sm:text-md font-semibold  absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <a href="https://drive.google.com/file/d/1aLp8SXcr3n5HBIr4poT0mhYFbmZgJ2ee/view?usp=sharing"
+              target="_blank"
+              class="font-poppins mb-3 inline-block text-center bg-white text-black px-4 py-2 rounded border-2 border-white hover:bg-black hover:text-white transition">
+              VIEW CASE STUDY
+            </a>
+            <a href="https://www.figma.com/proto/VteKKYpekOy7sBfKOm9DaZ/Untitled?page-id=0%3A1&node-id=47-3207&p=f&viewport=1145%2C688%2C0.15&t=IOHwXBbelXvjXUQ7-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A19799"
+              target="_blank"
+              class="font-poppins inline-block text-center bg-white text-black px-4 py-2 rounded border-2 border-white hover:bg-black hover:text-white transition">
+              VIEW PROTOTYPE
+            </a>
+          </div>
+
+          <!-- Image -->
+          <img src="assets/img/projects/2.jpg" class="w-full h-48 object-cover" />
+
+          <!-- Content -->
+          <div class="px-4 py-4 flex flex-col justify-between flex-1 relative z-10">
+            <h3 class="font-poppins text-lg md:text-xl mt-3 mb-3 font-semibold text-center">
+              Task Flow – Intern Task Tracker
+            </h3>
+            <p class="text-gray-300 text-sm text-center mb-4">
+              Designed a minimal dark-themed task tracker dashboard
+Includes scrollable task table, summary cards, and clean structure
+Focuses on tracking intern tasks and performance
+            </p>
+            <span class="font-poppins text-gray-400 text-xs mt-auto text-center">
+              June 2025 – July 2025
+            </span>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="relative group bg-stone-800 rounded-lg overflow-hidden shadow-lg w-sm h-sm sm:w-md sm:h-md transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
+
+          <!-- Overlay covering the whole card -->
+          <div
+            class="text-sm sm:text-md font-semibold  absolute inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+            <a href="https://drive.google.com/file/d/112x6e5gxspgch4s-mwkPhBn_QQ2yaxDt/view?usp=sharing"
+              target="_blank"
+              class="font-poppins mb-3 inline-block text-center bg-white text-black px-4 py-2 rounded border-2 border-white hover:bg-black hover:text-white transition">
+              VIEW CASE STUDY
+            </a>
+            <a href="https://www.figma.com/proto/FYu2K6aWD4oiWKIR0dvc1D/TOLETGLOBE-LANDING-PAGE?page-id=&node-id=0-1846&p=f&viewport=565%2C110%2C0.09&t=MDxgIwKKYyu190fu-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=0%3A1846"
+              target="_blank"
+              class="font-poppins inline-block text-center bg-white text-black px-4 py-2 rounded border-2 border-white hover:bg-black hover:text-white transition">
+              VIEW PROTOTYPE
+            </a>
+          </div>
+
+          <!-- Image -->
+          <img src="assets/img/projects/3.jpg" class="w-full h-48 object-cover" />
+
+          <!-- Content -->
+          <div class="px-4 py-4 flex flex-col justify-between flex-1 relative z-10">
+            <h3 class="font-poppins text-lg md:text-xl mt-3 mb-3 font-semibold text-center">
+              Tolet Globe – Landing Page Design
+            </h3>
+            <p class="text-gray-300 text-sm text-center mb-4">
+              Design a modern, responsive landing page for Tolet Globe that builds trust, communicates services clearly,
+              and encourages users to explore room rental options.
+            </p>
+            <span class="font-poppins text-gray-400 text-xs mt-auto text-center">
+              May 2025 – June 2025
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- WORK SECTION -->
+    <section id="works" class="xl:min-h-screen bg-neutral-950 py-16 px-3">
+      <h6 class="text-white mb-2 text-center">
+        PORTFOLIO
+      </h6>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-10 md:mb-12 lg:mb-16 text-center">
+        WORK I HAVE DONE
+      </h2>
+
+      <!-- Wrapper -->
+      <div class="relative flex items-center justify-center w-full max-w-6xl mx-auto px-4 sm:px-8 lg:px-10 2xl:px-20">
+      
+        <!-- Prev Button -->
+        <button id="prevBtn" 
+          class="hidden lg:block absolute left-2 top-1/2 -translate-y-1/2 
+                text-gray-500 hover:text-cyan-800 text-2xl z-10">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Carousel -->
+        <div class="overflow-hidden w-full max-w-6xl relative rounded-lg" id="carouselContainer">
+          <div id="carouselSlides" class="flex transition-transform duration-700 ease-in-out">
+            
+            <!-- Responsive widths: w-full (mobile 1), sm:w-1/2 (tablet 2), lg:w-1/3 (desktop 3) -->
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/1.jpg" class="w-full h-full object-contain rounded-lg" alt="Sneakers" />
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/2.jpg" class="w-full h-full object-contain rounded-lg" alt="Menu-card" />
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/3.png" class="w-full h-full object-contain rounded-lg" alt="Construction-Logo" />
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/4.jpg" class="w-full h-full object-contain rounded-lg" alt="To Let" />
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/5.png" class="w-full h-full object-contain rounded-lg" alt="Reflechir" />
+            </div>
+                    <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/6.jpg" class="w-full h-full object-contain rounded-lg" alt="Price-List" />
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/7.jpg" class="w-full h-full object-contain rounded-lg" alt="BoxChamp" />
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-1">
+              <img src="assets/img/works/8.png" class="w-full h-full object-contain rounded-lg" alt="T-Shirt" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Button -->
+        <button id="nextBtn" 
+          class="hidden lg:block absolute right-2 top-1/2 -translate-y-1/2 
+                text-gray-500 hover:text-cyan-800 text-2xl z-10">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+      </div>
+
+      <!-- Dots -->
+      <div id="carouselDots" class="flex justify-center space-x-2 mt-4"></div>
+
+      <!-- Lightbox Overlay -->
+      <div id="lightboxOverlay" 
+          class="fixed inset-0 bg-black/90 hidden z-50 flex items-center justify-center">
+        
+        <button id="lightboxClose" class="absolute top-4 right-4 text-white text-4xl hover:text-red-500">&times;</button>
+        
+        <!-- Prev Button -->
+        <button id="lightboxPrev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-2xl hover:text-cyan-500">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <!-- Image -->
+        <img id="lightboxImage" src="" alt="Preview" 
+            class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg object-contain mx-auto">
+
+        <!-- Next Button -->
+        <button id="lightboxNext" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-2xl hover:text-cyan-500">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+   </section>
+
+    <!-- EXPERIENCE AND EDUCATION SECTION -->
+    <section id="experience" class="bg-black xl:min-h-screen py-16">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+        <!-- Section Title -->
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-10 md:mb-12 lg:mb-16 text-center">
+          EXPERIENCE
+        </h2>
+
+        <!-- Timeline Container -->
+        <div class="relative">
+          <!-- Vertical timeline line -->
+          <div class="absolute left-5 top-0 w-0.5 h-[calc(100%+50px)] bg-gradient-to-b from-stone-600 via-stone-600 to-transparent"></div>
+
+          <!-- Timeline Item -->
+          <div class="mb-10 relative flex items-start">
+            <!-- Circle with icon -->
+            <div class="flex-shrink-0 w-10 h-10 bg-black rounded-full border-2 border-stone-600 flex items-center justify-center text-white z-10">
+              <i class="fas fa-palette text-sm"></i>
+            </div>
+
+            <!-- Timeline content -->
+            <div class="ml-6 flex-1 flex flex-col space-y-2">
+            <!-- Top Row: Title + Date -->
+            <div class="flex flex-col md:flex-row md:justify-between">
+              <div>
+                <h3 class="font-semibold text-md sm:text-lg md:text-xl text-white">UI/UX DESIGN INTERN</h3>
+                <p class="text-gray-300 text-sm">Tolet Globe, Lucknow</p>
+              </div>
+              <span class="font-poppins text-xs sm:text-sm text-gray-300 mt-1 md:mt-0 self-start">
+                17 Apr 2025 – 22 June 2025
+              </span>
+            </div>
+            
+              <!-- Bottom Row: Internship Type -->
+              <div class="flex gap-2 flex-wrap md:flex-nowrap">
+                <span class="font-poppins bg-blue-800/50 font-semibold text-blue-300 text-sm px-3 py-1 rounded-lg shrink-0">
+                  Internship
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- EDUCATION SECTION -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-10 md:mb-12 lg:mb-16 text-center">
+          EDUCATION
+        </h2>
+
+        <div class="relative">
+          <div class="absolute left-5 top-0 w-0.5 h-[calc(100%+80px)] bg-gradient-to-b from-stone-600 via-stone-600 to-transparent"></div>
+
+          <!-- College -->
+          <div class="mb-10 relative flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-black rounded-full border-2 border-stone-600 flex items-center justify-center text-white z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.84 5.644M12 14L5.84 16.222a12.083 12.083 0 00.84-5.644M12 14v7" />
+              </svg>
+            </div>
+            <div class="ml-6 flex-1 flex flex-col space-y-2">
+              <!-- Top Row: Title + Date -->
+              <div class="flex flex-col md:flex-row md:justify-between">
+                <div>
+                  <h3 class="font-semibold text-md sm:text-lg md:text-xl text-white">
+                    B.E. ELECTRONICS AND COMMUNICATION ENGINEERING
+                  </h3>
+                  <p class="text-gray-300 text-sm">K.L.N College of Engineering, Sivagangai</p>
+                </div>
+                <span class="font-poppins text-xs sm:text-sm text-gray-300 mt-1 md:mt-0 self-start">
+                  Aug 2021 – May 2025
+                </span>
+              </div>
+              <!-- Bottom Row: CGPA -->
+              <div class="flex gap-2 flex-wrap md:flex-nowrap">
+                <span class="font-poppins bg-green-800/50 font-semibold text-green-500 text-sm px-3 py-1 rounded-lg shrink-0">
+                  CGPA: 8.15
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Higher Secondary -->
+          <div class="mb-10 relative flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-black rounded-full border-2 border-stone-600 flex items-center justify-center text-white z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9M12 4h9M3 6h.01M3 10h.01M3 14h.01M3 18h.01M21 4v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2h12a2 2 0 012 2z" />
+              </svg>
+            </div>
+            <div class="ml-6 flex-1 flex flex-col space-y-2">
+              <!-- Top Row: Title + Date -->
+              <div class="flex flex-col md:flex-row md:justify-between">
+                <div>
+                  <h3 class="font-semibold text-md sm:text-lg md:text-xl text-white">
+                    HIGHER SECONDARY
+                  </h3>
+                  <p class="text-gray-300 text-sm">St Michael Matric Hr Sec School, Madurai</p>
+                </div>
+                <span class="font-poppins text-xs sm:text-sm text-gray-300 mt-1 md:mt-0 self-start">
+                  June 2020 – May 2021
+                </span>
+              </div>
+              <!-- Bottom Row: Grade -->
+              <div class="flex gap-2 flex-wrap md:flex-nowrap">
+                <span class="font-poppins bg-green-800/50 font-semibold text-green-500 text-sm px-3 py-1 rounded-lg shrink-0">
+                  Grade: 84.87%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary School -->
+          <div class="mb-10 relative flex items-start">
+            <div class="flex-shrink-0 w-10 h-10 bg-black rounded-full border-2 border-stone-600 flex items-center justify-center text-white z-10">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11l9-6 9 6M4 10v10h16V10M9 21V13h6v8" />
+              </svg>
+            </div>
+            <div class="ml-6 flex-1 flex flex-col space-y-2">
+              <!-- Top Row: Title + Date -->
+              <div class="flex flex-col md:flex-row md:justify-between">
+                <div>
+                  <h3 class="font-semibold text-md sm:text-lg md:text-xl text-white">
+                    SECONDARY SCHOOL
+                  </h3>
+                  <p class="text-gray-300 text-sm">St Michael Matric Hr Sec School, Madurai</p>
+                </div>
+                <span class="font-poppins text-xs sm:text-sm text-gray-300 mt-1 md:mt-0 self-start">
+                  June 2018 – Mar 2019
+                </span>
+              </div>
+              <!-- Bottom Row: Grade -->
+              <div class="flex gap-2 flex-wrap md:flex-nowrap">
+                <span class="font-poppins bg-green-800/50 font-semibold text-green-500 text-sm px-3 py-1 rounded-lg shrink-0">
+                  Grade: 80.60%
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="bg-zinc-900 text-white py-16 px-3">
+      <div class="max-w-4xl mx-auto px-6">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h6 class="text-white mb-2 text-center">
+            CONTACT
+          </h6>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-10 md:mb-12 lg:mb-16 text-center">
+            GET IN TOUCH
+          </h2>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" method="POST" class="space-y-6">
+          <input type="hidden" name="access_key" value="f59491af-4c3e-49e7-9700-bdcd8f061680">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Name -->
+            <input type="text" name="name" id="contact-name" placeholder="Name"
+              minlength="3" required
+              class="w-full px-4 py-3 bg-transparent border-b-2 border-white text-white placeholder-gray-400 focus:outline-none focus:border-stone-600 transition">
+
+            <!-- Email -->
+            <input type="email" name="email" id="contact-email" placeholder="Email"
+              required
+              class="w-full px-4 py-3 bg-transparent border-b-2 border-white text-white placeholder-gray-400 focus:outline-none focus:border-stone-600 transition">
+          </div>
+
+          <!-- Message -->
+          <textarea name="message" id="contact-message" rows="6" placeholder="How can we help you?" required
+            class="w-full px-4 py-3 bg-transparent border-b-2 border-white text-white placeholder-gray-400 focus:outline-none focus:border-stone-600 transition resize-none"></textarea>
+
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button id="contact-submit" type="submit"
+              class="font-poppins px-4 py-3 bg-white text-black text-sm sm:text-md  font-semibold rounded-md border border-white hover:bg-black hover:text-white transition duration-300">
+              SEND MESSAGE
+            </button>
+
+            <div id="result" class="mt-3 text-sm text-gray-300"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Start -->
+    <footer class="py-12">
+      <div class="container mx-auto max-w-6xl px-5 mb-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center gap-8">
+          <!-- Contact Item -->
+          <div class="contact-info">
+            <h5 class="text-white text-lg font-bold">Mohamed Abbas Mandhri N</h5>
+            <p class="text-white text-sm">UI/UX Designer</p>
+          </div>
+          <!-- Contact Item -->
+          <div class="contact-info">
+            <h5 class="text-white text-lg font-bold">Phone No.</h5>
+            <p class="text-white text-sm">(+91) 934 217 7535</p>
+          </div>
+          <!-- Contact Item -->
+          <div class="contact-info">
+            <h5 class="text-white text-lg font-bold">Email</h5>
+            <p class="text-white text-sm">abbasmandri2004@gmail.com</p>
+          </div>
+          <!-- Contact Item -->
+          <div class="contact-info">
+            <h5 class="text-white text-lg font-bold">Address</h5>
+            <p class="text-white text-sm">Madurai, Tamil Nadu, India</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </main>
+
+  <script>
+    //Contact Script
+    const form = document.getElementById('contact-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait...";
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = "Form submitted successfully";
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 3000);
+        });
+    });
+  </script>
+  <!--Jmain js-->
+  <script src="js/main.js"></script>
+  <!--Carousel js-->
+  <script src="js/carousel.js"></script>
+
+</body>
+</html>
